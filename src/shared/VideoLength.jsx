@@ -1,0 +1,14 @@
+import React from "react";
+import moment from "moment";
+
+function VideoLength({ time }) {
+  console.log("len", time, moment().startOf("day").seconds(time).format("H:mm:ss"));
+  const videoLeanthInSeconds = moment().startOf("day").seconds(time).format("H:mm:ss")
+  return (
+    <div className="absolute bottom-2 right-2 bg-black py-1 px-2 text-white text-xs rounded-md">
+      {videoLeanthInSeconds}
+    </div>
+  );
+}
+
+export default VideoLength;
